@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $credentialsPath = 'D:/Work/php/xampp/htdocs/fortestblad/credentials.json';
 $spreadsheetId = '1rSaegikZgR5hZQMN4J9gM4Id--VflZYcFJgCb-E2WVg';
-$range = 'Sheet1!A1:Z1000'; // Подкорректируйте диапазон, если нужно
+$range = 'Sheet1!A1:Z1000'; 
 
 function getDataFromGoogleSheet($spreadsheetId, $range, $credentialsPath) {
     $client = new \Google_Client();
@@ -40,9 +40,9 @@ $rowsToUpdate = [];
 $updateRange = [];
 
 foreach ($data as $index => $row) {
-    if (isset($row[3]) && $row[3] == 'Y') { // Предположим, что doUpdate находится в 4-м столбце
+    if (isset($row[3]) && $row[3] == 'Y') { 
         $rowsToUpdate[] = $row;
-        $data[$index][3] = ''; // Очищаем doUpdate
+        $data[$index][3] = ''; 
     }
 }
 
