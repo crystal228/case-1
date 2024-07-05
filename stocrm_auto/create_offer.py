@@ -20,8 +20,8 @@ driver.set_window_size(1920, 1080)
 driver.get("http://demo.stocrm.ru")
 
 # Вход на сайт
-driver.find_element(By.CSS_SELECTOR, "[type='Text']").send_keys("pavel_d@demo.ru")
-driver.find_element(By.CSS_SELECTOR, "[type='Password']").send_keys("CLGmL6ZN!")
+driver.find_element(By.CSS_SELECTOR, "[type='Text']").send_keys("p")
+driver.find_element(By.CSS_SELECTOR, "[type='Password']").send_keys("p!")
 driver.find_element(By.CSS_SELECTOR, "div.square_button_wrapper").click()
 
 # Ожидание загрузки следующей страницы
